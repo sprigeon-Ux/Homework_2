@@ -1,0 +1,323 @@
+/* =================================
+   1. WEBSITE COLOR PALETTE
+================================= */
+
+:root {
+    --navy: #172554;
+    --blue: #93C5FD;
+    --light-blue: #DBEAFE;
+    --white: #FFFFFF;
+    --light-gray: #EFF6FF;
+    --dark-text: #1E293B;
+}
+
+/* =================================
+   2. GENERAL WEBSITE STYLING
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--light-blue);
+    color: var(--dark-text);
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+    color: var(--navy);
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+/* =================================
+   3. HEADER AND NAVIGATION
+================================= */
+
+header {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 32px 16px;
+}
+
+header h1 {
+    color: var(--white);
+    margin-top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* =================================
+   4. MAIN CONTENT AND SECTIONS
+================================= */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+section {
+    background-color: var(--white);
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+}
+
+/* ID SELECTORS */
+
+#home,
+#projects,
+#about {
+    scroll-margin-top: 16px;
+}
+
+/* HOME IMAGE */
+
+#home img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 24px 0;
+}
+
+/* LINKS */
+
+a {
+    color: #1D4ED8;
+}
+
+a:hover {
+    color: var(--navy);
+}
+
+/* =================================
+   5. FAVORITE FOOD CARDS
+================================= */
+
+.foods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.food-card {
+    background-color: var(--light-blue);
+    padding: 24px;
+    border-radius: 12px;
+    border: 2px solid var(--blue);
+}
+
+.food-card h3 {
+    color: var(--navy);
+}
+
+/* =================================
+   6. FLEXBOX FOOD GALLERY
+================================= */
+
+.food-gallery {
+    background-color: var(--light-gray);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.food-item {
+    background-color: var(--light-blue);
+    padding: 24px;
+    border-radius: 12px;
+    border: 2px solid var(--blue);
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.food-item h3 {
+    color: var(--navy);
+    font-family: "Poppins", sans-serif;
+}
+
+/* =================================
+   7. CONTACT FORM
+================================= */
+
+form {
+    margin-top: 24px;
+}
+
+fieldset {
+    border: 2px solid var(--blue);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+legend {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--navy);
+}
+
+.error-message {
+    color: #991B1B;
+    font-size: 14px;
+}
+
+button {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 16px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1E40AF;
+}
+
+/* =================================
+   8. FOOTER
+================================= */
+
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 24px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =================================
+   9. TABLET RESPONSIVE DESIGN
+   Screens 768px and smaller
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    main {
+        padding: 16px;
+    }
+
+    .foods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* =================================
+   10. MOBILE RESPONSIVE DESIGN
+   Screens 480px and smaller
+================================= */
+
+@media screen and (max-width: 480px) {
+
+    main {
+        padding: 8px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    .foods {
+        grid-template-columns: 1fr;
+    }
+
+    .food-container {
+        flex-direction: column;
+    }
+
+    .food-item {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    header {
+        padding: 24px 16px;
+    }
+}
